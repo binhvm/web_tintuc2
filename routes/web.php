@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Resource admin
+Route::group(['prefix'=>'admin'], function(){
+	
+	//Resource user
+	Route::group(['prefix'=>'users'], function(){
+		Route::get('list', 'UserController@index');
+
+		Route::get('add', 'UserController@create');
+		Route::post('add', 'UserController@store');
+
+		Route::get('edit/{id}', 'UserController@edit');
+		Route::post('edit/{id}', 'UserController@update');
+	});
+});

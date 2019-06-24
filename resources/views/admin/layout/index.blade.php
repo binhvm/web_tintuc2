@@ -14,7 +14,7 @@
             text-decoration: none;
         }
     </style>
-    <title>Website Tin Tức</title>
+    <title>Instagram</title>
     <base href="{{asset('')}}">
 
     <!-- Bootstrap Core CSS -->
@@ -73,9 +73,6 @@
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
-                "language":{
-                    "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Vietnamese.json"
-                }
         });
     });
     </script>
