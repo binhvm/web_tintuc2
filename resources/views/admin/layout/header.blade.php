@@ -23,7 +23,7 @@
                         <li><a href="admin/users/edit/{{Auth::user()->id}}"><i class="fa fa-user fa-fw"></i> {{Auth::user()->name}}</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="logout"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>
+                        <li><a href="logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                         @endif
                     </ul>
