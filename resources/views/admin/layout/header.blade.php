@@ -7,13 +7,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand">Quản trị website</a>
-                <a class="navbar-brand" href="trangchu">Trang chủ</a>
+                <a class="navbar-brand" href="homepage">Homepage</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                <a href="admin/tintuc/pheduyet"><input type="button" class="btn btn-primary" id="btn_comment" value="Duyệt bài"></a>
                 
                 <!-- /.dropdown -->
                 <li class="dropdown">
