@@ -34,7 +34,7 @@ class LogController extends Controller
     	return view('register');
     }
 
-    public function Register()
+    public function Register(Request $request)
     {
     	$input = $request->only('name', 'email');
         $input['password'] = bcrypt($request->password);

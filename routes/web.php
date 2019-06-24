@@ -35,4 +35,4 @@ Route::get('login', 'LogController@getLogin');
 Route::post('login', 'LogController@Login');
 Route::get('register', 'LogController@getRegister');
 Route::post('register', 'LogController@Register');
-Route::get('logout', 'LogControllerLogout');
+Route::get('logout', 'LogController@Logout');

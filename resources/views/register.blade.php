@@ -43,7 +43,7 @@
                             @csrf
                             <div>
                                 <label>Name</label>
-                                <input type="email" class="form-control" placeholder="Please enter your email" name="email" value="{{old('name')}}" required>
+                                <input type="text" class="form-control" placeholder="Please enter your email" name="name" value="{{old('name')}}" required>
                             </div>
                             <br>
                             <div>
