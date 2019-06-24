@@ -18,7 +18,7 @@ class LogController extends Controller
     {
     	if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'status' => 1])){
-                return redirect('trangchu');
+                return redirect('homepage');
             }
             else{
                 Auth::logout();

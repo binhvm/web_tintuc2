@@ -1,40 +1,51 @@
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="navbar-header">
-            <span><i class="fab fa-instagram" ></i></span>
-            <a class="navbar-brand" href="homepage">| Instagram</a>
-        </div>
 
-        <form class="search-box">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="homepage">Instagram</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <div class="icon-menu">
-            <ul class="navbar-nav">
-                @if(Auth::check())
-                <li>
-                    <a href="thongtintk/{{Auth::user()->id}}"><span class="glyphicon glyphicon-user"></span> {{Auth::user()->name}}</a>
-                </li>
-                @if(Auth::user()->quyen == 1)
-                <li>
-                    <a href="admin/user/danhsach"><span class="glyphicon glyphicon-th"></span> Quản trị website</a>
-                </li>
-                @endif
-                <li>
-                    <a href="dangxuat"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a>
-                </li>
-                @else
-                <li>
-                    <a href="dangnhap"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a>
-                </li>
-                <li>
-                    <a href="dangky"><span class="glyphicon glyphicon-plus"></span> Đăng ký</a>
-                </li>
-                @endif
-            </ul>
+                <form class="navbar-form navbar-left" role="search" action="search" method="get">
+                    <div class="form-group">
+                      <input type="text" name='timkiem' class="form-control" placeholder="Search" required="">
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Search</button>
+                </form>
+
+                <ul class="nav navbar-nav pull-right">
+                        @if(Auth::check())
+                            <li>
+                                <a href="#"><span class="glyphicon glyphicon-user"></span> {{Auth::user()->name}}</a>
+                            </li>
+                            @if(Auth::user()->level == 1)
+                                <li>
+                                    <a href="admin/users/list"><span class="glyphicon glyphicon-th"></span> Admin pages</a>
+                                </li>
+                            @endif
+                            <li>
+                                <a href="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                            </li>
+                        @else
+                            <li>
+                                <a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                            </li>
+                            <li>
+                                <a href="register"><span class="glyphicon glyphicon-plus"></span> Register</a>
+                            </li>
+                        @endif
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container -->
     </nav>
-</header>
