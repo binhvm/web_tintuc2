@@ -27,6 +27,9 @@
                             <li>
                                 <a href="#"><span class="glyphicon glyphicon-user"></span> {{Auth::user()->name}}</a>
                             </li>
+                            <li>
+                                <a href="#"><span class="glyphicon glyphicon-plus"></span> Đăng ảnh</a>
+                            </li>
                             @if(Auth::user()->level == 1)
                                 <li>
                                     <a href="admin/users/list"><span class="glyphicon glyphicon-th"></span> Admin pages</a>
