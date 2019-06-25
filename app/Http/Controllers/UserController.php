@@ -45,7 +45,7 @@ class UserController extends Controller
         $input['status'] = 1;
         $user = User::create($input);
 
-    	return redirect()->back()->with('thongbao', 'Create user is success.');
+    	return redirect()->back()->with('notification', 'Create user is success.');
     }
 
     /**
@@ -101,7 +101,7 @@ class UserController extends Controller
         $users = User::findOrFail($id);
     	$users->update($input);
 
-    	return redirect()->back()->with('thongbao', 'Edit infor user is success.');
+    	return redirect()->back()->with('notification', 'Edit infor user is success.');
     }
 
     /**

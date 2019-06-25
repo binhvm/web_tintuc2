@@ -12,8 +12,8 @@
                         </h1>
                     </div>
                     
-                    @if(session('thongbao'))
-                        <div class="alert alert-danger">{{session('thongbao')}}</div>
+                    @if(session('notification'))
+                        <div class="alert alert-danger">{{session('notification')}}</div>
                     @endif
                     
                     <!-- /.col-lg-12 -->

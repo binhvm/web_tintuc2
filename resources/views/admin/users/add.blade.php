@@ -20,8 +20,8 @@
                             </div>
                         @endif
                         
-                        @if(session('thongbao'))
-                            <div class="alert alert-success">{{session('thongbao')}}</div>
+                        @if(session('notification'))
+                            <div class="alert alert-success">{{session('notification')}}</div>
                         @endif
 
                         <form action="admin/users/add" method="POST">

@@ -23,8 +23,8 @@
                         @endif
                         
                         {{-- Hiển thị thông báo --}}
-                        @if(session('thongbao'))
-                            <div class="alert alert-warning">{{session('thongbao')}}</div>
+                        @if(session('notification'))
+                            <div class="alert alert-warning">{{session('notification')}}</div>
                         @endif
 
                         <form action="admin/users/edit/{{$users->id}}" method="POST">
